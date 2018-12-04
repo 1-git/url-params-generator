@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\apicrm\urlParamsGenerator;
+namespace oneGit\urlParamsGenerator;
 
 /**
  * Simple url combination generator
@@ -64,7 +64,7 @@ namespace tests\apicrm\urlParamsGenerator;
  * Class UrlParamsGenerator
  * @package tests\apicrm\urlVariantsGenerator
  */
-class UrlParamsGenerator
+class UrlGenerator
 {
     /**
      * @param array $list
@@ -136,7 +136,7 @@ class UrlParamsGenerator
             $urls[] = "{$path}?{$added}";
         } else {
             foreach ($urls as $key => $url) {
-                $urls[$key] = "{$url}+{$added}";
+                $urls[$key] = "{$url}&{$added}";
             }
         }
         return $urls;
